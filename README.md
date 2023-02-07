@@ -1,40 +1,8 @@
-# MrubyGemScaffolding
+# mruby Gem Scaffolding
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/mruby_gem_scaffolding`. To experiment with that code, run `bin/console` for an interactive prompt.
+This gem allows you to easily create a basic working scaffold of an mruby gem.
 
-TODO: Delete this and the text above, and describe your gem
+Install the gem by `gem install mruby_gem_scaffolding` and then run with `mruby_gem_scaffolding`
 
-## Installation
+https://rubygems.org/gems/mruby_gem_scaffolding
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'mruby_gem_scaffolding'
-```
-
-And then execute:
-
-    $ bundle install
-
-Or install it yourself as:
-
-    $ gem install mruby_gem_scaffolding
-
-## Usage
-
-TODO: Write usage instructions here
-
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/mruby_gem_scaffolding.
-
-
-## License
-
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).

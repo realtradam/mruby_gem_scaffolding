@@ -1,0 +1,22 @@
+#!/usr/bin/env ruby
+
+require "mruby_gem_scaffolding"
+
+print "Enter your project name: "
+project_name = gets.chomp
+
+Dir.mkdir project_name unless File.exists? project_name
+if !Dir.empty? project_name
+  puts "#{project_name} directory is not empty. Quitting..."
+  return
+end
+
+print "Enter your author name: "
+user_name = gets.chomp
+
+MrubyGemScaffolding.write(
+  "./#{project_name}",
+  MrubyGemScaffolding.generate(user_name: user_name, project_name: project_name)
+)
+
+puts "Done!"
