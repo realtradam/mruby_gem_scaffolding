@@ -49,7 +49,7 @@ MRuby::Gem::Specification.new('#{Utility.snake_case(project_name)}') do |spec|
 end
 MULTILINE
 
-      result["src"]["main.c"] =
+      result["src"]["#{Utility.snake_case(project_name)}.c"] =
         <<MULTILINE
 #include <mruby.h>
 #include <stdio.h>
@@ -58,7 +58,7 @@ MULTILINE
 static mrb_value
 hello_world(mrb_state *mrb, mrb_value self)
 {
-    printf("Hello World");
+    printf("Hello World\\n");
 
     return mrb_nil_value(); // return null
 }
@@ -81,6 +81,17 @@ void
 mrb_#{Utility.snake_case(project_name)}_gem_final(mrb_state* mrb) {
 
 }
+MULTILINE
+
+      result["mrblib"]["#{Utility.snake_case(project_name)}.rb"] =
+        <<MULTILINE
+module #{Utility.camel_case(project_name)}
+  class << self
+    def say_goodbye
+      puts "Goodbye"
+    end
+  end
+end
 MULTILINE
 
       result["LICENSE"] =
